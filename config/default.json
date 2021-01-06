@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://sahinyasasi:sahinyasasi@merncluster.7hmbj.mongodb.net/<dbname>?retryWrites=true&w=majority",
-  "jwtSecret": "mysecret"
+  "jwtSecret": "mysecret",
+  "githubClientId": "d288c73d9311d3421b3f",
+  "githubClientPassword": "0dd78bf932a774b924f7d94ea1d92fe375e5c3b4"
 }
