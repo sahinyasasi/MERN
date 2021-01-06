@@ -89,4 +89,17 @@ router.post(
     }
   }
 );
+
+//path get api/profile
+//desc to get all profiles
+//access  public
+router.get("/", async (req, res) => {
+  try {
+    const profiles = await Profile.find().populate("user", ["name", "avatar"]);
+    res.json(profiles);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("server error");
+  }
+});
 module.exports = router;
