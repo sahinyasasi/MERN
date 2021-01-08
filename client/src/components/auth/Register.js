@@ -99,7 +99,7 @@ export const Register = ({ setAlert }) => {
     </Fragment>
   );
 };
-Register.PropTypes = {
+/*Register.PropTypes = {
   setAlert: PropTypes.func.isRequired,
-};
+};*/
 export default connect(null, { setAlert })(Register);
