@@ -6,6 +6,8 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const User = require("../../models/User");
 const { check, validationResult } = require("express-validator");
+var cors = require("cors");
+router.use(cors());
 //path  POST api/users
 //desc register user
 //access  public
