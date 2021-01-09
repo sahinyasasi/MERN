@@ -7,7 +7,7 @@ import { REGISTER_SUCCESS, REGISTER_FAIL } from "./types";
 export const register = ({ name, email, password }) => async (dispatch) => {
   const config = {
     headers: {
-      "Content-Type": "applicaton/json",
+      "Content-Type": "application/json",
     },
   };
   const body = { name, email, password };
@@ -17,6 +17,7 @@ export const register = ({ name, email, password }) => async (dispatch) => {
       type: REGISTER_SUCCESS,
       payload: res.data,
     });
+    console.log(res);
   } catch (err) {
     const errors = err.response.data.errors;
     if (errors) {
