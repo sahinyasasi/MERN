@@ -15,6 +15,9 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </Link>
       </li>
       <li>
+        <Link to='/profiles'>Devolopers</Link>
+      </li>
+      <li>
         <a onClick={logout} href='#!'>
           <i className='fas fa-sign-out-alt'></i>{" "}
           <span className='hide-sm'>Logout</span>
@@ -25,7 +28,7 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <ul>
       <li>
-        <a href='#!'>Developers</a>
+        <Link to='/profiles'>Devolopers</Link>
       </li>
       <li>
         <Link to='/register'>Register</Link>
