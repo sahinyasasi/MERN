@@ -8,6 +8,7 @@ import ProfileTop from "./ProfileTop";
 import ProfileAbout from "./ProfileAbout";
 import ProfileExperience from "./ProfileExperience";
 import ProfileEducation from "./ProfileEducation";
+import ProfileGithub from "./ProfileGithub";
 
 const Profile = ({
   getProfileById,
@@ -68,6 +69,9 @@ const Profile = ({
                 <h4>No Educational credentials found</h4>
               )}
             </div>
+            {profile.githubusername && (
+              <ProfileGithub username={profile.githubusername} />
+            )}
           </div>
         </Fragment>
       )}
@@ -78,7 +82,7 @@ const Profile = ({
 Profile.propTypes = {
   getProfileById: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  state: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired,
 };
 const mapStateToProps = (state) => ({
   profile: state.profile,
