@@ -17,6 +17,7 @@ import Profile from "./components/profile/Profile";
 import Posts from "./components/posts/Posts";
 import Post from "./components/post/Post";
 import notFound from "./components/layouts/notFound";
+import EditProfile from "./components/profile-forms/EditProfile";
 
 //Redux
 import { Provider } from "react-redux";
@@ -49,6 +50,11 @@ const App = () => {
                 exact
                 path='/create-profile'
                 component={CreateProfile}
+              />
+              <PrivateRoute
+                exact
+                path='/edit-profile'
+                component={EditProfile}
               />
               <PrivateRoute
                 exact
