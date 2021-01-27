@@ -42,7 +42,28 @@ const EditProfile = ({
       youtube: loading || !profile.youtube ? "" : profile.social.youtube,
       instagram: loading || !profile.instagram ? "" : profile.social.instagram,
     });
-  }, [loading]);
+  }, [
+    loading,
+    getCurrentProfile,
+    profile.bio,
+    profile.company,
+    profile.facebook,
+    profile.githubusername,
+    profile.instagram,
+    profile.linkedIn,
+    profile.location,
+    profile.skills,
+    profile.social.facebook,
+    profile.social.instagram,
+    profile.social.linkedI,
+    profile.social.twitter,
+    profile.social.youtube,
+    profile.status,
+    profile.twitter,
+    profile.website,
+    profile.youtube,
+    profile.social.linkedIn,
+  ]);
   const {
     company,
     website,
